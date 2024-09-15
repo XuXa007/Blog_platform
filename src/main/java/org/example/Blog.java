@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
@@ -64,5 +61,10 @@ public class Blog {
         }
         return removed;
     }
+
+    public List<Article> getArticles() {
+        return  Collections.unmodifiableList(articles);
+    }
+
 
 }
